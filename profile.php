@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 
 require_once 'app/init.php';
 
@@ -6,13 +6,7 @@ require_once 'app/init.php';
 $client = new Google_Client();
 $auth = new Auth($client);
 
-if ($auth->checkRedirectCode())
-{
- 	header('Location: profile.php');
-}
-
 ?>
-
 
  <!DOCTYPE html>
  <html>

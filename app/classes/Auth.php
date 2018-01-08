@@ -29,5 +29,30 @@ Class Auth
 		return $this->client->createAuthUrl();
 	}
 
+
+	public function checkRedirectCode() 
+	{
+		if (isset($_GET['code'])) {
+
+			$this->client->authenticate($_GET['code']);
+
+			// setting redirect token in session
+
+			$this->setToken($this->client->getAccessToken());
+
+			return true;
+		}
+
+		false;
+	}
+
+
+	public function setToken($token)
+	{
+		$_SESSION['access_token'] = $token;
+
+		$this->client->setAccessToken($token);
+	}
+
 }
 
