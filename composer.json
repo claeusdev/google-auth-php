@@ -1,0 +1,12 @@
+{
+    "name": "claeusdev/goog",
+    "require": {
+        "google/apiclient": "^2.2"
+    },
+    "authors": [
+        {
+            "name": "Nana Adjei Manu",
+            "email": "claeusdev@gmail.com"
+        }
+    ]
+}
