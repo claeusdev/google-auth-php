@@ -1,6 +1,6 @@
 <?php 
 
-Class Auth
+final class Auth
 {
 
 	protected $client;
@@ -24,7 +24,7 @@ Class Auth
 	}
 
 
-	public function getAuthUrl()
+	public static function getAuthUrl()
 	{
 		return $this->client->createAuthUrl();
 	}
@@ -47,7 +47,7 @@ Class Auth
 	}
 
 
-	public function setToken($token)
+	public static function setToken($token)
 	{
 		$_SESSION['access_token'] = $token;
 

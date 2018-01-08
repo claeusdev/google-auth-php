@@ -1,7 +1,14 @@
 {
     "name": "claeusdev/goog",
+    "autoload": {
+        "classmap": [
+            "app/classes"
+        ]
+    },
     "require": {
-        "google/apiclient": "^2.2"
+        "google/apiclient": "^2.2",
+        "phpunit/phpunit": "^6.5",
+        "vlucas/phpdotenv": "^2.4"
     },
     "authors": [
         {
