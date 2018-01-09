@@ -1,5 +1,7 @@
 <?php 
 
+
+
 final class Auth
 {
 
@@ -11,9 +13,9 @@ final class Auth
 		$this->client = $googleClient;
 
 		if ($this->client) {
-			$this->client->setClientId('54395839616-3pvssucel04peesvleikjmf82pl9ent6.apps.googleusercontent.com');
-			$this->client->setClientSecret('kGwrclAPHkbz8WHscGwJsc_N');
-			$this->client->setRedirectUri('http://localhost/goog/index.php');
+			$this->client->setClientId(getenv('ClientId'));
+			$this->client->setClientSecret(getenv('ClientSecret'));
+			$this->client->setRedirectUri(getenv('RedirectUri'));
 			$this->client->setScopes('email');
 		}
 	}
@@ -24,7 +26,7 @@ final class Auth
 	}
 
 
-	public static function getAuthUrl()
+	public function getAuthUrl()
 	{
 		return $this->client->createAuthUrl();
 	}
@@ -47,7 +49,7 @@ final class Auth
 	}
 
 
-	public static function setToken($token)
+	public function setToken($token)
 	{
 		$_SESSION['access_token'] = $token;
 

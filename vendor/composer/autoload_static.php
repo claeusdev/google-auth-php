@@ -47,6 +47,7 @@ class ComposerStaticInit656d1f14a19bbef85b9f1b30cf469ffd
         ),
         'D' => 
         array (
+            'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
         ),
@@ -102,6 +103,10 @@ class ComposerStaticInit656d1f14a19bbef85b9f1b30cf469ffd
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (

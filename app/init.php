@@ -7,5 +7,10 @@ error_reporting(E_ALL);
 
 session_start();
 
+
+
 require_once 'vendor/autoload.php';
 require_once 'classes/Auth.php';
+
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
